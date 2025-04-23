@@ -9,7 +9,7 @@ function styles() {
     src("src/styles/*.css")
       .pipe(sourcemaps.init())
       // .pipe(autoprefixer()) // Добавление префиксов (для совместимости с  браузерами)
-      // .pipe(concat("all.min.css")) // Склеиваем все в один файл
+      .pipe(concat("style.css")) // Склеиваем все в один файл
       .pipe(clean()) // Минимизация CSS
       .pipe(sourcemaps.write("."))
       .pipe(dest("public/styles"))
