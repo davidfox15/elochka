@@ -6,16 +6,16 @@ const server = () => {
     server: {
       baseDir: "./public",
     },
-    callbacks: {
-      ready: function (err, browserSync) {
-        browserSync.addMiddleware("*", function (req, res) {
-          res.writeHead(302, {
-            location: "404.html",
-          });
-          res.end("Redirecting!");
-        });
-      },
-    },
+    // callbacks: {
+    //   ready: function (err, browserSync) {
+    //     browserSync.addMiddleware("*", function (req, res) {
+    //       res.writeHead(302, {
+    //         location: "404.html",
+    //       });
+    //       res.end("Redirecting!");
+    //     });
+    //   },
+    // },
     port: 3001,
     browser: "chrome",
     // logPrefix: "BS-HTML:",

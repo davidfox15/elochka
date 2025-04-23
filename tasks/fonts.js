@@ -3,7 +3,9 @@ const { src, dest } = require("gulp");
 // const ttf2woff = requier("gulp-ttf2woff");
 
 function ttf(done) {
-  src("src/fonts/**/*.ttf").pipe(dest("public/fonts/"));
+  src("src/fonts/**/*.ttf", { encoding: false, removeBOM: false }).pipe(
+    dest("public/fonts/"),
+  );
   // src(["src/fonts/**/*.ttf"], {
   //   encoding: false, // Important!
   //   removeBOM: false,

@@ -6,6 +6,7 @@ const scripts = require("./tasks/scripts");
 const browserSync = require("browser-sync");
 const server = require("./tasks/server");
 const fonts = require("./tasks/fonts");
+const images = require("./tasks/images");
 
 // Экспорт задач
 exports.clean = clean;
@@ -22,12 +23,12 @@ function watch_dev() {
 
 exports.watch = series(
   clean,
-  parallel(html, styles, scripts, fonts),
+  parallel(html, styles, scripts, fonts, images),
   parallel(server, watch_dev),
 );
 
 // Задача по умолчанию (выполняется при команде "gulp")
-const build = series(clean, parallel(html, styles, scripts, fonts));
+const build = series(clean, parallel(html, styles, scripts, fonts, images));
 
 // Установка задачи по умолчанию
 exports.default = build;

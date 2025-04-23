@@ -1,0 +1,35 @@
+.header {
+  background: #1b1c1e;
+  width: 100%;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header-spacer {
+  flex-grow: 1;
+}
+
+.header-left {
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header-contacts {
+  text-align: center;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu-button {
+  color: #fff;
+  font-size: 24px;
+}

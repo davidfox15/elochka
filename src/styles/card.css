@@ -1,0 +1,31 @@
+.main-list-card {
+  width: 280px;
+  background-color: #fff;
+  border-radius: var(--br-lg);
+  padding: 8px 16px;
+  margin: 0 150px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  transition: ease 0.1s all;
+}
+
+.main-list-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.main-list-card:nth-child(2n) {
+  margin: 0 0 0 150px;
+  background-color: var(--color-primary);
+}
+
+.main-list-card hr {
+  margin: 8px 0;
+}
+
+.main-list-card img {
+  height: 80px;
+  width: 80px;
+}
