@@ -9,14 +9,17 @@
   <body>
     @@include('./header.html')
     <main>
-      <div class="container main-container">
+      <div class="main-container">
         <h1 class="main-title">
-          Добро пожаловать на официальный сайт детского оздоровительного лагеря
-          "Eлочка"
+          Добро пожаловать<br />
+          на официальный сайт<br />
+          детского оздоровительного лагеря "Eлочка"
         </h1>
         <!-- prettier-ignore -->
-        @@include('./components/button.html', { id: 'calendar-button', text: 'Расписание смен'})
-        @@include('./components/button.html', { id: 'calendar-button', text: 'Купить путевку'})
+        <div class="main-buttons">
+        @@include('./components/button.html', { id: 'calendar-button', text: 'Расписание смен', class: 'main-button big-text'})
+        @@include('./components/button.html', { id: 'calendar-button', text: 'Купить путевку', class: 'main-button big-text'})
+        </div>
       </div>
       <div class="container main-info">
         <div class="main-info-text">
@@ -40,6 +43,28 @@
             ])
         </div>
       </div>
+
+      <div class="main-video">
+        <h2 class="main-h2">Жизнь лагеря</h2>
+        <video controls width="100%">
+          <source src="camp.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает встроенные видео :(
+        </video>
+      </div>
+
+      <div class="container main-quote">
+        «Елочка» — это не просто лагерь, это место, где сбываются мечты, где
+        каждый ребенок может стать героем своего собственного приключения. Здесь
+        царит дух дружбы и взаимопомощи, а воспоминания о проведенном времени
+        останутся в сердцах детей на всю жизнь.
+      </div>
+      <h2 class="main-h2">Наши ценности</h2>
+      @@include('./components/worth.html')
     </main>
+    <footer>
+      <div class="footer-text">
+        © 2025. Официальный сайт детского лагеря «Елочка»
+      </div>
+    </footer>
   </body>
 </html>

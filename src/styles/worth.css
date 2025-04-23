@@ -1,0 +1,35 @@
+.worth-block {
+  margin-bottom: 32px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  color: white;
+}
+@media (max-width: 768px) {
+  .worth-block {
+    grid-template-columns: 1fr;
+  }
+}
+
+.worth-card {
+  border-radius: var(--br-md);
+  padding: 12px 24px;
+  background-color: var(--color-background);
+}
+
+.worth-card-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.worth-card-icon {
+  display: flex;
+  align-items: center;
+  width: 64px;
+}
+
+.worth-card-text {
+  flex-grow: 2;
+}
