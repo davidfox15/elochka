@@ -17,19 +17,20 @@
         <!-- prettier-ignore -->
         @@include('./components/button.html', { id: 'calendar-button', text: 'Расписание смен'})
         @@include('./components/button.html', { id: 'calendar-button', text: 'Купить путевку'})
-        <div class="main-info">
-          <div class="main-info-text">
-            <p>
-              Детский оздоровительный лагерь «Елочка» — это особенное место, где
-              каждый ребенок может окунуться в атмосферу радости, дружбы и
-              незабываемых приключений. Расположенный в живописном уголке
-              природы, лагерь окружен зелеными лесами и чистыми водоемами, что
-              создает идеальные условия для активного отдыха и оздоровления.
-            </p>
-          </div>
-          <div class="main-list">
-            <!-- prettier-ignore -->
-            @@loop('components/card.html', [ 
+      </div>
+      <div class="container main-info">
+        <div class="main-info-text">
+          <p>
+            Детский оздоровительный лагерь «Елочка» — это особенное место, где
+            каждый ребенок может окунуться в атмосферу радости, дружбы и
+            незабываемых приключений. Расположенный в живописном уголке природы,
+            лагерь окружен зелеными лесами и чистыми водоемами, что создает
+            идеальные условия для активного отдыха и оздоровления.
+          </p>
+        </div>
+        <div class="main-list">
+          <!-- prettier-ignore -->
+          @@loop('components/card.html', [ 
               { img: "images/house.png", alt: "Дом", title: "Условия проживания" },
               { img: "images/food.png", alt: "Питание", title: "Питание и безопасность" },
               { img: "images/calendar.png", alt: "Расписание", title: "Распорядок дня" },
@@ -37,7 +38,6 @@
               { img: "images/sport.png", alt: "Спорт", title: "Спорт и соревнования" },
               { img: "images/drum.png", alt: "Мероприятия", title: "Мероприятия и активность"}
             ])
-          </div>
         </div>
       </div>
     </main>

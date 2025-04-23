@@ -29,3 +29,13 @@
   height: 80px;
   width: 80px;
 }
+
+@media (max-width: 768px) {
+  .main-list-card {
+    margin: 0;
+  }
+
+  .main-list-card:nth-child(2n) {
+    margin: 0;
+  }
+}
