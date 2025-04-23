@@ -16,9 +16,9 @@ exports.scripts = scripts;
 
 // Слежка за изменениями (опционально)
 function watch_dev() {
-  watch("./src/scripts/*.js", scripts).on("change", browserSync.reload);
-  watch("./src/styles/*.css", styles).on("change", browserSync.reload);
-  watch("./src/pages/*.html", html).on("change", browserSync.reload);
+  watch("./src/scripts/**/*.js", scripts).on("change", browserSync.reload);
+  watch("./src/styles/**/*.css", styles).on("change", browserSync.reload);
+  watch("./src/**/*.html", html).on("change", browserSync.reload);
 }
 
 exports.watch = series(
