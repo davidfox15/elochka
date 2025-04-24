@@ -176,6 +176,14 @@ main {
   margin-bottom: 32px;
 }
 
+@media (max-width: 768px) {
+  .main-social {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 16px;
+  }
+}
+
 .main-social-text {
   color: white;
   font-size: var(--font-md);
@@ -184,4 +192,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .main-social-text {
+    gap: 8px;
+  }
+}
+
+#vk_groups {
+  width: 100%;
 }
