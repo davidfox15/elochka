@@ -86,23 +86,35 @@
           src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A596f009515159efa51000528bd9253f05c91b0bd5eb838efc60a0947a42429b3&amp;width=1440&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
         ></script>
       </div>
-      <!-- Put this div tag to the place, where the Group block will be -->
-      <div id="vk_groups"></div>
-      <script type="text/javascript">
-        VK.Widgets.Group(
-          "vk_groups",
-          {
-            mode: 4,
-            no_cover: 1,
-            wide: 1,
-            height: 400,
-            color1: "FFFFFF",
-            color2: "000000",
-            color3: "5181B8",
-          },
-          213361908,
-        );
-      </script>
+
+      <section class="container main-news">
+        <div class="main-news-text">
+          <span>
+            За всеми новостями<br />
+            следите в соц. сетях
+          </span>
+          <p>
+            "Елочка не просто лагерь — это второй дом, где каждый ребенок может
+            быть собой, мечтать и расти. В «Елочке» сбываются мечты о настоящем
+            детском счастье"
+          </p>
+        </div>
+        <div id="vk_groups"></div>
+        <script type="text/javascript">
+          VK.Widgets.Group(
+            "vk_groups",
+            {
+              mode: 4,
+              height: 500,
+              width: 500,
+              color1: "FFFFFF",
+              color2: "000000",
+              color3: "5181B8",
+            },
+            213361908,
+          );
+        </script>
+      </section>
     </main>
     @@include('components/footer.html')
   </body>

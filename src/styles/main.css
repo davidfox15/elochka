@@ -73,7 +73,7 @@ main {
   border-radius: var(--br-lg) 0 0 var(--br-lg);
   color: #fff;
   padding: 100px 32px;
-  font-size: 24px;
+  font-size: var(--font-md);
   line-height: 180%;
 }
 
@@ -165,4 +165,23 @@ main {
   border-radius: 50%;
   background-color: blue;
   margin-right: 16px;
+}
+
+.main-news {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.main-news-text {
+  color: white;
+  font-size: var(--font-md);
+  line-height: 150%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }

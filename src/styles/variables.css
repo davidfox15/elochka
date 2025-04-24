@@ -19,4 +19,10 @@
   --color-dark-green: #2d675c;
   --color-green: #17a098;
   --color-ligth-green: #66c4bf;
+
+  --font-xs: 14px;
+  --font-sm: 20px;
+  --font-md: 24px;
+  --font-lg: 32px;
+  --font-xl: 48px;
 }
