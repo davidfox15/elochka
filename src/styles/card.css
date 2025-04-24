@@ -39,3 +39,11 @@
     margin: 0;
   }
 }
+
+.main-list-card-title {
+  font-size: var(--font-sm);
+}
+
+.main-list-card-small {
+  font-size: var(--font-xs);
+}
