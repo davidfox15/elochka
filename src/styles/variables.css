@@ -1,24 +1,19 @@
 :root {
-  --color-primary-green: #17a098;
-  --color-secondary-green: #66c4bf;
-
+  --color-green: #17a098;
   --color-background-dark: #1b1c1e;
+  --color-background-second-dark: #252729;
+
+  /* not in use */
   --color-primary: #4d99af;
-  --color-background: #0b3048;
-  --color-third: #4c92aa;
-
-  --color-background-header: #252729;
-
-  --br-sm: 8px;
-  --br-md: 16px;
-  --br-lg: 32px;
-
   --color-dark: #2b3130;
   --color-light: #c2c5c6;
   --color-blue: #327799;
   --color-dark-green: #2d675c;
-  --color-green: #17a098;
   --color-ligth-green: #66c4bf;
+
+  --br-sm: 8px;
+  --br-md: 16px;
+  --br-lg: 32px;
 
   --font-xs: 14px;
   --font-sm: 20px;
