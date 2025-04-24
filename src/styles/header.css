@@ -1,4 +1,5 @@
 .header {
+  padding: 0 32px;
   position: fixed;
   left: 50%;
   transform: translate(-50%);
@@ -10,7 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0 0 var(--br-lg) var(--br-lg);
   gap: 16px;
 }
 
