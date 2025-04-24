@@ -1,7 +1,11 @@
 @import "./variables.css";
 
 body {
-  background: #1b1c1e;
+  background: var(--color-background-dark);
+}
+
+main {
+  padding-top: 90px;
 }
 
 .main-container {
@@ -133,7 +137,6 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
   color: white;
   text-align: center;
