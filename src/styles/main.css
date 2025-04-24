@@ -84,7 +84,7 @@ main {
   background-image: linear-gradient(
     120deg,
     var(--color-background) 30%,
-    var(--color-third)
+    var(--color-primary-green)
   );
   border-radius: 0 var(--br-xl) var(--br-xl) 0;
   padding: 32px 16px;

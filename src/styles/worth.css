@@ -15,7 +15,7 @@
 .worth-card {
   border-radius: var(--br-md);
   padding: 12px 24px;
-  background-color: var(--color-background);
+  background-color: var(--color-primary-green);
 }
 
 .worth-card-content {
