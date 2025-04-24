@@ -67,21 +67,23 @@ li {
   line-height: 130%;
 }
 
-.md-text {
-  font-size: 16px;
-  line-height: 150%;
-}
-
-.big-text {
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 700;
-}
-
-.h3 {
-  margin: 12px 24px;
+h3 {
   color: white;
-  font-size: 24px;
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: var(--font-lg);
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: var(--font-xl);
   font-weight: 700;
   text-align: center;
 }

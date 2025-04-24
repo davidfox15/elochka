@@ -12,4 +12,11 @@
   --br-sm: 8px;
   --br-md: 16px;
   --br-lg: 32px;
+
+  --color-dark: #2b3130;
+  --color-light: #c2c5c6;
+  --color-blue: #327799;
+  --color-dark-green: #2d675c;
+  --color-green: #17a098;
+  --color-ligth-green: #66c4bf;
 }

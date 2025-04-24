@@ -32,4 +32,6 @@
 
 .worth-card-text {
   flex-grow: 2;
+  font-size: var(--font-sm);
+  line-height: 150%;
 }
