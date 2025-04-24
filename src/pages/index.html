@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Елочка</title>
     <link href="styles/style.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://vk.com/js/api/openapi.js?168"
+    ></script>
   </head>
   <body>
-    @@include('./header.html')
+    @@include('components/header.html')
     <main>
       <div class="main-container">
         <h1 class="main-title">
@@ -17,8 +21,8 @@
         </h1>
         <!-- prettier-ignore -->
         <div class="main-buttons">
-        @@include('./components/button.html', { id: 'calendar-button', text: 'Расписание смен', class: 'main-button big-text'})
-        @@include('./components/button.html', { id: 'calendar-button', text: 'Купить путевку', class: 'main-button big-text'})
+        @@include('components/button.html', { id: 'calendar-button', text: 'Расписание смен', class: 'main-button big-text'})
+        @@include('components/button.html', { id: 'calendar-button', text: 'Купить путевку', class: 'main-button big-text'})
         </div>
       </div>
       <div class="container main-info">
@@ -59,7 +63,7 @@
         останутся в сердцах детей на всю жизнь.
       </div>
       <h2 class="main-h2">Наши ценности</h2>
-      @@include('./components/worth.html')
+      @@include('components/worth.html')
 
       <h2 class="main-h2">Как до нас добраться ?</h2>
 
@@ -82,11 +86,24 @@
           src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A596f009515159efa51000528bd9253f05c91b0bd5eb838efc60a0947a42429b3&amp;width=1440&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
         ></script>
       </div>
+      <!-- Put this div tag to the place, where the Group block will be -->
+      <div id="vk_groups"></div>
+      <script type="text/javascript">
+        VK.Widgets.Group(
+          "vk_groups",
+          {
+            mode: 4,
+            no_cover: 1,
+            wide: 1,
+            height: 400,
+            color1: "FFFFFF",
+            color2: "000000",
+            color3: "5181B8",
+          },
+          213361908,
+        );
+      </script>
     </main>
-    <footer>
-      <div class="footer-text">
-        © 2025. Официальный сайт детского лагеря «Елочка»
-      </div>
-    </footer>
+    @@include('components/footer.html')
   </body>
 </html>

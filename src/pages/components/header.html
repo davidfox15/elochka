@@ -5,10 +5,9 @@
     <span class="header-contacts--phone">34-34-34</span>
     <span class="header-contacts--email">elochka@mail.ru</span>
   </div>
-  @@include('./components/button.html', { id: 'main-button', class:
-  'desktop-button', text: 'Главная' }) @@include('./components/button.html', {
-  id: 'parents-button', class: 'desktop-button', text: 'Родителям' })
-  @@include('./components/button.html', { id: 'info-button', class:
-  'desktop-button', text: 'Информация' })
+  <!-- prettier-ignore -->
+  @@include('button.html', { id: 'main-button', class: 'desktop-button', text: 'Главная' })
+  @@include('button.html', { id: 'parents-button', class: 'desktop-button', text: 'Родителям' })
+  @@include('button.html', { id: 'info-button', class: 'desktop-button', text: 'Информация' })
   <div id="menu-button" class="mobile-button">---</div>
 </header>
