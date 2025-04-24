@@ -167,7 +167,7 @@ main {
   margin-right: 16px;
 }
 
-.main-news {
+.main-social {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -176,7 +176,7 @@ main {
   margin-bottom: 32px;
 }
 
-.main-news-text {
+.main-social-text {
   color: white;
   font-size: var(--font-md);
   line-height: 150%;
