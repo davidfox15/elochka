@@ -60,6 +60,28 @@
       </div>
       <h2 class="main-h2">Наши ценности</h2>
       @@include('./components/worth.html')
+
+      <h2 class="main-h2">Как до нас добраться ?</h2>
+
+      <div class="container main-map-text">
+        <div>
+          <div id="car"></div>
+          <span> На машине по красному маршруту</span>
+        </div>
+        <div>
+          <div id="train"></div>
+          <span> На электричке по синему маршруту<br />(Станция Хотылёво)</span>
+        </div>
+      </div>
+
+      <div id="map-container">
+        <script
+          type="text/javascript"
+          charset="utf-8"
+          async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A596f009515159efa51000528bd9253f05c91b0bd5eb838efc60a0947a42429b3&amp;width=1000&amp;height=400&amp;lang=ru_RU&amp;scroll=true"
+        ></script>
+      </div>
     </main>
     <footer>
       <div class="footer-text">

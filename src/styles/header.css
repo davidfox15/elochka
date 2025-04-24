@@ -9,10 +9,6 @@
   gap: 16px;
 }
 
-.header-spacer {
-  flex-grow: 1;
-}
-
 .header-left {
   color: var(--color-primary);
   font-size: 24px;
