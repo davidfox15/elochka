@@ -1,7 +1,7 @@
 .main-list-card {
   width: 300px;
   background-color: #fff;
-  border-radius: var(--br-lg);
+  border-radius: var(--br-md);
   padding: 8px 16px;
   margin: 0 150px 0 0;
   display: flex;

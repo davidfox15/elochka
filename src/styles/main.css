@@ -73,7 +73,7 @@ main {
   background-position: bottom;
   background-repeat: no-repeat;
   background-color: var(--color-background);
-  border-radius: var(--br-xl) 0 0 var(--br-xl);
+  border-radius: var(--br-lg) 0 0 var(--br-lg);
   color: #fff;
   padding: 100px 32px;
   font-size: 24px;
@@ -86,7 +86,7 @@ main {
     var(--color-background) 30%,
     var(--color-primary-green)
   );
-  border-radius: 0 var(--br-xl) var(--br-xl) 0;
+  border-radius: 0 var(--br-lg) var(--br-lg) 0;
   padding: 32px 16px;
   display: flex;
   flex-direction: column;

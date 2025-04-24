@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
 
-  border-radius: var(--br-md);
+  border-radius: var(--br-sm);
   padding: 8px 16px;
 }
 

@@ -13,7 +13,7 @@
 }
 
 .worth-card {
-  border-radius: var(--br-md);
+  border-radius: var(--br-sm);
   padding: 12px 24px;
   background-color: var(--color-primary-green);
 }
