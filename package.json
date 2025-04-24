@@ -25,5 +25,8 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "del": "^6.1.1"
   }
 }

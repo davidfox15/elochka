@@ -1,11 +1,8 @@
-const fs = require("fs");
+const del = require("del");
 
 // Задача для очистки папки dist
 async function clean() {
-  const dir = fs.existsSync("./public");
-  if (dir) {
-    fs.rmdirSync("./public", { recursive: true });
-  }
+  await del(["public/**", "!public/video"]);
 }
 
 module.exports = clean;
