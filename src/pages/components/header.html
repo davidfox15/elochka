@@ -1,13 +1,16 @@
 <header class="header">
-  <div class="header-left">@@include('logo.html', { height: '80px' })</div>
+  <div class="header-left">
+    <a href="/">@@include('logo.html', { height: '80px' })</a>
+  </div>
   <div class="flex-spacer"></div>
   <div class="header-contacts">
-    <span class="header-contacts--phone">34-34-34</span>
-    <span class="header-contacts--email">elochka@mail.ru</span>
+    <!-- <span class="header-contacts--phone">34-34-34</span> -->
+    <!-- <span class="header-contacts--email">elochka@mail.ru</span> -->
   </div>
   <!-- prettier-ignore -->
-  @@include('button.html', { id: 'main-button', class: 'desktop-button', text: 'Главная' })
-  @@include('button.html', { id: 'parents-button', class: 'desktop-button', text: 'Родителям' })
-  @@include('button.html', { id: 'info-button', class: 'desktop-button', text: 'Информация' })
+  <!-- @@include('button.html', { id: 'main-button', class: 'desktop-button', text: 'Главная' }) -->
+  @@include('button.html', { id: 'parents-button', class: 'desktop-button',
+  text: 'Родителям' }) @@include('button.html', { id: 'info-button', class:
+  'desktop-button', text: 'Информация' })
   <div id="menu-button" class="mobile-button">---</div>
 </header>
