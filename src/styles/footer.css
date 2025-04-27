@@ -23,6 +23,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: var(--font-xs);
 }
 
 .footer-info {
