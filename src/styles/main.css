@@ -36,6 +36,7 @@ main {
 
 .main-button {
   padding: 24px 64px;
+  font-size: var(--font-md);
 }
 
 @media (max-width: 768px) {

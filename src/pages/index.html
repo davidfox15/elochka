@@ -19,10 +19,13 @@
           на официальный сайт<br />
           детского оздоровительного лагеря "Eлочка"
         </h1>
-        <!-- prettier-ignore -->
         <div class="main-buttons">
-        @@include('components/button.html', { id: 'calendar-button', text: 'Расписание смен', class: 'main-button big-text'})
-        @@include('components/button.html', { id: 'calendar-button', text: 'Купить путевку', class: 'main-button big-text'})
+          <a href="smena.html" title="Страница смен" class="main-button button">
+            Расписание смен
+          </a>
+          <a href="smena.html" title="Страница смен" class="main-button button">
+            Купить путевку
+          </a>
         </div>
       </div>
       <div class="container main-info">
@@ -94,8 +97,12 @@
             следите в соц. сетях
           </span>
           <div class="main-social-icons">
-            <a href=""> @@include('components/tg-icon.html') </a>
-            <a href="https://vk.com/elochkacamp"> @@include('components/vk-icon.html') </a>
+            <a href="https://t.me/elochka32">
+              @@include('components/tg-icon.html')
+            </a>
+            <a href="https://vk.com/elochkacamp">
+              @@include('components/vk-icon.html')
+            </a>
           </div>
           <p>
             "Елочка не просто лагерь — это второй дом, где каждый ребенок может
