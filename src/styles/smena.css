@@ -1,0 +1,132 @@
+.smena-hr {
+  width: 90%;
+}
+
+.sessions {
+  margin-bottom: 16px;
+}
+
+.sessions-title {
+  padding: 16px 0;
+}
+
+.sessions-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 32px;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .sessions-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.session-card {
+  height: 100%;
+  padding-bottom: 24px;
+  overflow: hidden;
+  max-width: 500px;
+  position: relative;
+  background-color: var(--color-dark-green);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  margin: 16px;
+  border: 2px solid white;
+  border-radius: var(--br-md);
+}
+
+.session-card:hover {
+  cursor: pointer;
+}
+
+.session-days {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 0 var(--br-sm) 0 var(--br-sm);
+}
+
+.session-name {
+  width: 100%;
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: #000;
+  border-radius: var(--br-sm) var(--br-sm) 0 0;
+  background: var(--color-green);
+  padding: 16px 32px;
+}
+
+.session-date {
+  padding: 0 24px;
+  font-family: "Jost Light", "Roboto Condensed", Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: var(--font-sm);
+}
+
+.session-price-list {
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-items: start;
+  grid-column-gap: 4px;
+  grid-row-gap: 16px;
+  color: white;
+}
+
+.session-price {
+  background: var(--color-light-green);
+  padding: 4px 16px;
+  border-radius: 0 var(--br-lg) var(--br-lg) 0;
+  color: black;
+}
+
+.session-price-type {
+  background: var(--color-green);
+  padding: 4px 16px;
+  border-radius: var(--br-lg) 0 0 var(--br-lg);
+  color: black;
+  width: 100%;
+}
+
+.session-description {
+  padding: 8px 8px;
+  margin: 0 24px;
+  font-size: var(--font-xs);
+  border-radius: var(--br-sm);
+  background: white;
+}
+
+.session-extra {
+  margin: 0 24px;
+  font-size: var(--font-xs);
+  color: white;
+}
+
+.smena-buy h2 {
+  padding: 16px 0;
+}
+
+.smena-buy p {
+  color: white;
+  font-size: var(--font-sm);
+  background-color: var(--color-dark-green);
+  border-radius: var(--br-sm);
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.smena-buy span {
+  color: white;
+  font-size: var(--font-md);
+  line-height: 200%;
+  /* max-width: 700px; */
+}
