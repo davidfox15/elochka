@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Елочка</title>
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    @@include('components/header.html')
+    <main>
+      <div class="container main-container">
+        <h1 class="main-title" id="sessions-header">Распорядок дня</h1>
+        <hr class="smena-hr" />
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">8:30</div>
+          <div class="timeline-dot"></div>
+          <p class="timeline-content">
+            Подъём, водные процедуры, уборка кровати
+          </p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">8:40</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">Общелагерная или отрядная зарядка</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">9:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">Завтрак</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            Работа кружков, отрядные мероприятия, спортивные соревнования
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">11:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            Обще лагерные мероприятия и игры согласно ежедневному плану
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">13:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">Обед</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">14:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">Тихий час</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">16:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">подъем, Полдник</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">17:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            Работа кружков, спортивные соревнования, общелагерные мероприятия
+            согласно ежедневному плану
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">Ужин</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">20:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">Вечернее общелагерное мероприятие</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">22:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            Подведение итогов дня в отрядах, подготовка ко сну
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">22:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">Отбой</div>
+        </div>
+      </div>
+    </main>
+    @@include('components/footer.html')
+  </body>
+</html>

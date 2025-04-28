@@ -1,0 +1,66 @@
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 81px;
+  top: 16px;
+  bottom: 40px;
+  width: 2px;
+  background: #666;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 60px 12px 1fr;
+  align-items: center;
+}
+
+.timeline-time {
+  width: 60px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  margin-left: 32px;
+  font-size: 1em;
+  color: white;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 81px;
+  }
+
+  .timeline-item {
+    margin-bottom: 24px;
+  }
+
+  .timeline-time {
+    font-size: 1em;
+  }
+
+  .timeline-content {
+    margin-left: 50px;
+    font-size: 0.9em;
+    color: #fff;
+  }
+}
