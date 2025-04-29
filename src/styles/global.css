@@ -56,15 +56,10 @@ li {
 }
 
 .container {
+  width: 100%;
   max-width: 1440px;
   padding: 0 32px;
   margin: 0 auto;
-}
-
-/* text styles */
-.small-text {
-  font-size: 14px;
-  line-height: 130%;
 }
 
 h3 {
@@ -89,6 +84,7 @@ h1 {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
   cursor: pointer;
 }

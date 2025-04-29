@@ -207,3 +207,8 @@ main {
 #vk_groups {
   width: 100%;
 }
+
+.main-hr {
+  width: 90%;
+  margin: 0 auto;
+}
