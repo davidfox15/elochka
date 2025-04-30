@@ -34,7 +34,7 @@ exports.watch = series(
 // Задача по умолчанию (выполняется при команде "gulp")
 const build = series(
   clean,
-  parallel(html, styles, scripts, fonts, images, webp),
+  parallel(html, styles, scripts, fonts, series(convertHEIC, webp, images)),
 );
 
 // Установка задачи по умолчанию
