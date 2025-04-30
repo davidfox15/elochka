@@ -7,12 +7,14 @@ const browserSync = require("browser-sync");
 const server = require("./tasks/server");
 const fonts = require("./tasks/fonts");
 const images = require("./tasks/images");
+const convertHEIC = require("./tasks/heic");
 
 // Экспорт задач
 exports.clean = clean;
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.heic = convertHEIC;
 
 // Слежка за изменениями (опционально)
 function watch_dev() {
