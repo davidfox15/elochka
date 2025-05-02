@@ -3,10 +3,9 @@ const path = require("path");
 const { promisify } = require("util");
 const convert = require("heic-convert");
 
-async function deleteMatchingFiles(
-  heicDir = "src/heic",
-  imagesDir = "src/images",
-) {
+async function deleteMatchingFiles() {
+  const heicDir = "src/heic";
+  const imagesDir = "src/images";
   try {
     // Получаем список файлов из папки heic
     const files = await fs.promises.readdir(heicDir);
@@ -75,4 +74,4 @@ async function convertHEIC() {
   }
 }
 
-module.exports = convertHEIC;
+module.exports = { convertHEIC, cleanHEIC: deleteMatchingFiles };

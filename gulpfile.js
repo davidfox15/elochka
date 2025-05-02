@@ -7,7 +7,7 @@ const browserSync = require("browser-sync");
 const server = require("./tasks/server");
 const fonts = require("./tasks/fonts");
 const images = require("./tasks/images");
-const convertHEIC = require("./tasks/heic");
+const { convertHEIC, cleanHEIC } = require("./tasks/heic");
 const webp = require("./tasks/webp");
 
 // Экспорт задач
@@ -16,6 +16,7 @@ exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.heic = convertHEIC;
+exports.cleanheic = cleanHEIC;
 
 // Слежка за изменениями (опционально)
 function watch_dev() {
