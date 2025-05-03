@@ -5,8 +5,6 @@ const recompress = require("imagemin-jpeg-recompress");
 const pngquant = require("imagemin-pngquant");
 
 module.exports = function rastr() {
-  src("src/favicon.*").pipe(dest("public"));
-
   return src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico)", {
     encoding: false,
   })

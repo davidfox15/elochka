@@ -1,4 +1,4 @@
-const { watch, series, parallel } = require("gulp");
+const { watch, series, parallel, src, dest } = require("gulp");
 const clean = require("./tasks/clean");
 const html = require("./tasks/html");
 const styles = require("./tasks/styles");
@@ -18,6 +18,10 @@ exports.scripts = scripts;
 exports.heic = convertHEIC;
 exports.cleanheic = cleanHEIC;
 
+function other_files() {
+  return src(["src/favicon.*", "src/sitemap.xml"]).pipe(dest("public"));
+}
+
 // Слежка за изменениями (опционально)
 function watch_dev() {
   watch("./src/scripts/**/*.js", scripts).on("change", browserSync.reload);
@@ -35,8 +39,22 @@ exports.watch = series(
 // Задача по умолчанию (выполняется при команде "gulp")
 const build = series(
   clean,
-  parallel(html, styles, scripts, fonts, series(convertHEIC, webp, images)),
+  parallel(
+    html,
+    styles,
+    scripts,
+    fonts,
+    other_files,
+    series(convertHEIC, webp, images),
+  ),
+);
+
+const buidlWithoutHEIC = series(
+  clean,
+  parallel(html, styles, scripts, fonts, other_files, series(webp, images)),
 );
 
 // Установка задачи по умолчанию
 exports.default = build;
+
+exports.buildnoheic = buidlWithoutHEIC;
