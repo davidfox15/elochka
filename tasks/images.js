@@ -1,21 +1,12 @@
-// function images() {
-//   return src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico)", {
-//     encoding: false,
-//   }).pipe(dest("public/images/"));
-//   return src("src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)").pipe(
-//     changed("build/img"),
-//   );
-// }
-// module.exports = images;
-
 const { src, dest } = require("gulp");
 const changed = require("gulp-changed");
 const imagemin = require("gulp-imagemin");
 const recompress = require("imagemin-jpeg-recompress");
 const pngquant = require("imagemin-pngquant");
-const bs = require("browser-sync");
 
 module.exports = function rastr() {
+  src("src/favicon.*").pipe(dest("public"));
+
   return src("src/images/**/*.+(png|jpg|jpeg|gif|svg|ico)", {
     encoding: false,
   })
