@@ -19,7 +19,9 @@ exports.heic = convertHEIC;
 exports.cleanheic = cleanHEIC;
 
 function other_files() {
-  return src(["src/favicon.*", "src/sitemap.xml"]).pipe(dest("public"));
+  return src(["src/favicon.*", "src/sitemap.xml", "src/robots.txt"]).pipe(
+    dest("public"),
+  );
 }
 
 // Слежка за изменениями (опционально)
