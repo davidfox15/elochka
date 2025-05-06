@@ -64,3 +64,11 @@
     color: #fff;
   }
 }
+
+.map-title {
+  margin-bottom: 16px;
+}
+
+.map {
+  max-width: 100%;
+}
