@@ -127,6 +127,31 @@ main {
   text-align: center;
 }
 
+.promo {
+  overflow: hidden;
+}
+
+.promo-mobile-img {
+  display: none;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.promo-desktop-img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .promo-mobile-img {
+    display: block;
+  }
+
+  .promo-desktop-img {
+    display: none;
+  }
+}
+
 .main-map-text {
   width: 100%;
   display: flex;
