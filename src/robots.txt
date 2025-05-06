@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /details.html
+Allow: /smena.html
+sitemap: https://lager-elochka.ru/sitemap.xml
