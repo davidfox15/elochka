@@ -18,10 +18,12 @@ exports.scripts = scripts;
 exports.heic = convertHEIC;
 exports.cleanheic = cleanHEIC;
 
-function other_files() {
-  return src(["src/favicon.*", "src/sitemap.xml", "src/robots.txt"]).pipe(
-    dest("public"),
-  );
+function other_files(done) {
+  src("src/documents/*.*", { encoding: false }).pipe(dest("public/documents/"));
+  src(["src/favicon.*", "src/sitemap.xml", "src/robots.txt"], {
+    encoding: false,
+  }).pipe(dest("public"));
+  done();
 }
 
 // Слежка за изменениями (опционально)
@@ -34,7 +36,7 @@ function watch_dev() {
 
 exports.watch = series(
   clean,
-  parallel(html, styles, scripts, fonts, images, webp),
+  parallel(html, styles, scripts, fonts, images, webp, other_files),
   parallel(server, watch_dev),
 );
 
