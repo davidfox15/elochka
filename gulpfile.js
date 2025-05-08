@@ -41,22 +41,8 @@ exports.watch = series(
 // Задача по умолчанию (выполняется при команде "gulp")
 const build = series(
   clean,
-  parallel(
-    html,
-    styles,
-    scripts,
-    fonts,
-    other_files,
-    series(convertHEIC, webp, images),
-  ),
-);
-
-const buidlWithoutHEIC = series(
-  clean,
   parallel(html, styles, scripts, fonts, other_files, series(webp, images)),
 );
 
 // Установка задачи по умолчанию
 exports.default = build;
-
-exports.buildnoheic = buidlWithoutHEIC;
