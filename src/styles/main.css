@@ -1,13 +1,5 @@
 @import "./variables.css";
 
-body {
-  background: var(--color-background-dark);
-}
-
-main {
-  padding-top: 90px;
-}
-
 .main-container {
   padding-top: 32px;
   display: flex;

@@ -33,7 +33,13 @@
 }
 
 body {
+  background: var(--color-background-dark);
   font-family: "Jost", "Roboto Condensed", Arial, Helvetica, sans-serif;
+  min-height: calc(100vh - 90px);
+}
+
+main {
+  min-height: calc(100vh - 90px);
 }
 
 button {
@@ -41,10 +47,10 @@ button {
 }
 
 main {
+  padding-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 li {
