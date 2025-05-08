@@ -1,11 +1,5 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  style="
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    transform-origin: 50% 50%;
-    max-height: none;
-    transition: transform 200ms ease-in-out;
-  "
   height="120px"
   viewBox="0 0 5720 4010"
 >
