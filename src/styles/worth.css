@@ -1,7 +1,6 @@
 .worth-block {
   margin: 0 auto 40px;
   width: 100%;
-  padding-inline-start: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;

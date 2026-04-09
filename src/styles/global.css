@@ -46,6 +46,7 @@ main {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 main {
