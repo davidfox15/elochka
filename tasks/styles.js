@@ -3,6 +3,7 @@ const sourcemaps = require("gulp-sourcemaps");
 // const autoprefixer = require("gulp-autoprefixer");
 const clean = require("gulp-clean-css");
 const concat = require("gulp-concat");
+const browserSync = require("browser-sync");
 
 function styles() {
   return (
@@ -13,6 +14,7 @@ function styles() {
       .pipe(clean()) // Минимизация CSS
       .pipe(sourcemaps.write("."))
       .pipe(dest("public/styles"))
+      .pipe(browserSync.stream())
   );
 }
 

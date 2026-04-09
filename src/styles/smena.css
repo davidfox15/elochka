@@ -1,128 +1,532 @@
+.smena-hero {
+  margin-top: 24px;
+  padding: 38px 34px;
+  border-radius: var(--br-lg);
+  background: linear-gradient(140deg, #16292c, #1b3134 55%, #20393c);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-strong);
+}
+
+.smena-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.smena-title {
+  margin-top: 16px;
+  text-align: left;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 115%;
+  text-wrap: balance;
+}
+
+.smena-subtitle {
+  margin-top: 12px;
+  max-width: 920px;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 165%;
+  color: var(--color-text-muted);
+}
+
+.smena-pills {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.smena-pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: #e7f9f7;
+}
+
+.smena-stats {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.smena-stat {
+  border-radius: var(--br-sm);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.smena-stat-value {
+  font-size: clamp(30px, 2.4vw, 38px);
+  font-weight: 700;
+}
+
+.smena-stat-label {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .sessions {
-  margin-bottom: 16px;
+  margin: 24px auto;
+  padding: 26px;
+  border-radius: var(--br-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.sessions-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
 }
 
 .sessions-title {
-  padding: 16px 0;
+  text-align: left;
+  font-size: clamp(30px, 3.2vw, 42px);
 }
 
 .sessions-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-column-gap: 16px;
-  grid-row-gap: 32px;
-  justify-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.session-card {
+  min-height: 100%;
+  border-radius: var(--br-md);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 8px 18px var(--shadow-color);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.session-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-green);
+}
+
+.session-card--theme::before {
+  background: #d3b45e;
+}
+
+.session-card--intense::before {
+  background: #d98a76;
+}
+
+.session-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title days"
+    "date date";
+  gap: 10px;
   align-items: center;
 }
 
-@media (max-width: 768px) {
+.session-name {
+  grid-area: title;
+  margin-right: 10px;
+  text-align: left;
+  font-size: clamp(27px, 2.3vw, 34px);
+  line-height: 120%;
+  color: var(--color-text-strong);
+}
+
+.session-days {
+  grid-area: days;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  min-height: 32px;
+  padding: 6px 12px;
+  background: var(--color-contrast-surface);
+  color: #0f2d2e;
+  font-size: var(--font-xs);
+  font-weight: 700;
+}
+
+.session-date {
+  grid-area: date;
+  color: var(--color-text-muted);
+  font-size: 18px;
+}
+
+.session-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.session-chip {
+  border-radius: 999px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  font-size: 15px;
+}
+
+.session-price-list {
+  margin-top: 2px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 6px;
+}
+
+.session-price-type,
+.session-price {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.session-price-type {
+  padding: 6px 12px;
+  border-radius: var(--br-sm) 0 0 var(--br-sm);
+  background: rgba(255, 255, 255, 0.92);
+  color: #143637;
+}
+
+.session-price {
+  padding: 6px 12px;
+  border-radius: 0 var(--br-sm) var(--br-sm) 0;
+  background: #b8fbf3;
+  color: #082f2f;
+}
+
+.session-description {
+  border-radius: var(--br-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 12px 14px;
+  font-size: 17px;
+  line-height: 155%;
+}
+
+.session-features {
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  border-top: 1px dashed var(--color-border);
+  padding: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.session-features li {
+  list-style: disc;
+  margin-left: 16px;
+}
+
+.session-extra {
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-text-muted);
+}
+
+.session-action {
+  margin-top: auto;
+  width: fit-content;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: var(--br-sm);
+  background: var(--color-contrast-surface);
+  color: #0f2d2e;
+  font-weight: 700;
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.session-action:hover {
+  transform: translateY(-2px);
+}
+
+.smena-buy {
+  margin-bottom: 24px;
+  padding: 26px;
+  border-radius: var(--br-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.smena-buy h2 {
+  text-align: left;
+  font-size: clamp(30px, 3vw, 40px);
+  padding: 4px 0 12px;
+}
+
+.smena-buy-intro {
+  color: var(--color-text-strong);
+  font-size: clamp(20px, 2vw, 27px);
+  line-height: 165%;
+  max-width: 900px;
+}
+
+.smena-buy-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.smena-buy-card {
+  border-radius: var(--br-sm);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 16px;
+}
+
+.smena-buy-card h3 {
+  text-align: left;
+  font-size: clamp(22px, 1.9vw, 28px);
+  line-height: 135%;
+  margin-bottom: 8px;
+}
+
+.smena-buy-card p {
+  color: var(--color-text);
+  font-size: 19px;
+  line-height: 160%;
+  margin-top: 8px;
+}
+
+.smena-buy-steps {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.smena-buy-step {
+  border-radius: var(--br-sm);
+  padding: 14px;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.smena-buy-step span {
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-contrast-surface);
+  color: #0f2d2e;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smena-buy-step p {
+  color: var(--color-text);
+  font-size: 17px;
+  line-height: 150%;
+}
+
+.smena-buy-contact {
+  margin-top: 14px;
+  border-radius: var(--br-sm);
+  padding: 14px;
+  border: 1px solid rgba(184, 251, 243, 0.35);
+  background: rgba(184, 251, 243, 0.08);
+}
+
+.smena-buy-contact p {
+  color: var(--color-text-strong);
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 155%;
+}
+
+.smena-buy-contact a {
+  color: #c6fff9;
+  text-decoration: underline;
+}
+
+html[data-theme="light"] .smena-hero {
+  background: linear-gradient(140deg, #f5faf9, #edf5f3 55%, #e5efed);
+  border-color: rgba(23, 160, 152, 0.24);
+}
+
+html[data-theme="light"] .smena-badge,
+html[data-theme="light"] .smena-pill,
+html[data-theme="light"] .smena-stat {
+  border-color: rgba(23, 160, 152, 0.28);
+  background: rgba(23, 160, 152, 0.08);
+  color: #144244;
+}
+
+html[data-theme="light"] .sessions {
+  border-color: rgba(23, 160, 152, 0.2);
+  background: #ffffff;
+}
+
+html[data-theme="light"] .session-card {
+  border-color: rgba(23, 160, 152, 0.22);
+  background: rgba(23, 160, 152, 0.02);
+  box-shadow: 0 8px 16px rgba(15, 45, 47, 0.08);
+}
+
+html[data-theme="light"] .session-chip {
+  border-color: rgba(23, 160, 152, 0.3);
+  background: rgba(23, 160, 152, 0.12);
+  color: #114041;
+}
+
+html[data-theme="light"] .session-price-type {
+  background: rgba(255, 255, 255, 0.9);
+  color: #134244;
+}
+
+html[data-theme="light"] .session-description {
+  background: rgba(23, 160, 152, 0.04);
+  border-color: rgba(23, 160, 152, 0.2);
+  color: #133d3f;
+}
+
+html[data-theme="light"] .session-features {
+  background: transparent;
+  border-color: rgba(23, 160, 152, 0.24);
+  color: #184748;
+}
+
+html[data-theme="light"] .session-extra {
+  color: #2a5f61;
+}
+
+html[data-theme="light"] .smena-buy {
+  border-color: rgba(23, 160, 152, 0.2);
+  background: #ffffff;
+}
+
+html[data-theme="light"] .smena-buy-card {
+  border-color: rgba(23, 160, 152, 0.2);
+  background: rgba(23, 160, 152, 0.03);
+}
+
+html[data-theme="light"] .smena-buy-card p,
+html[data-theme="light"] .smena-buy-step p {
+  color: #1f5456;
+}
+
+html[data-theme="light"] .smena-buy-step {
+  border-color: rgba(23, 160, 152, 0.35);
+  background: rgba(23, 160, 152, 0.04);
+}
+
+html[data-theme="light"] .smena-buy-contact {
+  border-color: rgba(23, 160, 152, 0.36);
+  background: rgba(23, 160, 152, 0.1);
+}
+
+html[data-theme="light"] .smena-buy-contact a {
+  color: #0f6f6a;
+}
+
+@media (max-width: 1024px) {
+  .smena-stats,
   .sessions-list {
     grid-template-columns: 1fr;
   }
 }
 
-.session-card {
-  height: 100%;
-  padding-bottom: 24px;
-  overflow: hidden;
-  max-width: 500px;
-  position: relative;
-  background-color: var(--color-dark-green);
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 16px;
-  margin: 16px;
-  border: 2px solid white;
-  border-radius: var(--br-md);
-}
+@media (max-width: 768px) {
+  .smena-hero {
+    margin-top: 12px;
+    padding: 24px 18px;
+    border-radius: var(--br-md);
+  }
 
-.session-card:hover {
-  cursor: pointer;
-}
+  .smena-title {
+    font-size: 34px;
+  }
 
-.session-days {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: white;
-  padding: 8px 16px;
-  border-radius: 0 var(--br-sm) 0 var(--br-sm);
-}
+  .smena-subtitle {
+    font-size: 20px;
+  }
 
-.session-name {
-  width: 100%;
-  font-size: var(--font-lg);
-  font-weight: 700;
-  color: #000;
-  border-radius: var(--br-sm) var(--br-sm) 0 0;
-  background: var(--color-green);
-  padding: 16px 32px;
-}
+  .sessions {
+    padding: 16px;
+  }
 
-.session-date {
-  padding: 0 24px;
-  font-family: "Jost Light", "Roboto Condensed", Arial, Helvetica, sans-serif;
-  font-weight: 200;
-  font-size: var(--font-sm);
-}
+  .smena-buy {
+    padding: 16px;
+  }
 
-.session-price-list {
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  justify-items: start;
-  grid-column-gap: 4px;
-  grid-row-gap: 16px;
-  color: white;
-}
+  .sessions-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.session-price {
-  background: var(--color-light-green);
-  padding: 4px 16px;
-  border-radius: 0 var(--br-lg) var(--br-lg) 0;
-  color: black;
-}
+  .session-card {
+    padding: 16px;
+  }
 
-.session-price-type {
-  background: var(--color-green);
-  padding: 4px 16px;
-  border-radius: var(--br-lg) 0 0 var(--br-lg);
-  color: black;
-  width: 100%;
-}
+  .session-name {
+    font-size: 30px;
+  }
 
-.session-description {
-  padding: 8px 8px;
-  margin: 0 24px;
-  font-size: var(--font-xs);
-  border-radius: var(--br-sm);
-  background: white;
-}
+  .session-date {
+    font-size: 18px;
+  }
 
-.session-extra {
-  margin: 0 24px;
-  font-size: var(--font-xs);
-  color: white;
-}
+  .session-price-list {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
 
-.smena-buy h2 {
-  padding: 16px 0;
-}
+  .session-price-type,
+  .session-price {
+    border-radius: var(--br-sm);
+  }
 
-.smena-buy p {
-  color: white;
-  font-size: var(--font-sm);
-  background-color: var(--color-dark-green);
-  border-radius: var(--br-sm);
-  padding: 8px 16px;
-  margin-bottom: 16px;
-}
+  .smena-buy-grid,
+  .smena-buy-steps {
+    grid-template-columns: 1fr;
+  }
 
-.smena-buy span {
-  color: white;
-  font-size: var(--font-md);
-  line-height: 200%;
-  /* max-width: 700px; */
+  .smena-buy-contact p {
+    font-size: 20px;
+  }
 }

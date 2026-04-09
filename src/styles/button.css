@@ -1,6 +1,6 @@
 .button {
   background: var(--color-green);
-  color: white;
+  color: var(--color-text-strong);
   font-size: 18px;
 
   display: flex;

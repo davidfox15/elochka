@@ -29,7 +29,7 @@ function other_files(done) {
 // Слежка за изменениями (опционально)
 function watch_dev() {
   watch("./src/scripts/**/*.js", scripts).on("change", browserSync.reload);
-  watch("./src/styles/**/*.css", styles).on("change", browserSync.reload);
+  watch("./src/styles/**/*.css", styles);
   watch("./src/**/*.html", html).on("change", browserSync.reload);
   watch("./src/images/*", html).on("change", browserSync.reload);
 }

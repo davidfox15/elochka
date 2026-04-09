@@ -1,11 +1,13 @@
 .parents-hero {
-  margin-top: 24px;
+  margin: 24px auto 0;
+  width: calc(100% - 64px);
+  max-width: 1376px;
   padding: 40px 32px;
   border-radius: var(--br-lg);
   background:
-    radial-gradient(circle at top right, rgba(23, 160, 152, 0.35), transparent 50%),
-    linear-gradient(140deg, #0b3048 0%, #123d3f 45%, #1f5a52 100%);
-  color: #fff;
+    radial-gradient(circle at top right, rgba(23, 160, 152, 0.18), transparent 55%),
+    linear-gradient(145deg, #162c30 0%, #1b3438 48%, #224044 100%);
+  color: var(--color-text-strong);
 }
 
 .parents-hero-badge {
@@ -51,9 +53,9 @@
   padding: 24px;
   border-radius: var(--br-md);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
     var(--color-background-second-dark);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border);
   transition: transform 0.2s ease;
 }
 
@@ -68,7 +70,7 @@
 }
 
 .parents-card p {
-  color: #d7d7d7;
+  color: var(--color-text-muted);
   line-height: 150%;
 }
 
@@ -82,9 +84,9 @@
 
 .parents-accordion {
   background: var(--color-background-second-dark);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border);
   border-radius: var(--br-md);
-  color: #fff;
+  color: var(--color-text-strong);
   overflow: hidden;
 }
 
@@ -110,8 +112,8 @@
 }
 
 .parents-accordion[open] summary {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .parents-accordion[open] summary::after {
@@ -124,9 +126,57 @@
 }
 
 .parents-summary-note {
-  color: #cdd5d7;
+  color: var(--color-text-muted);
   font-size: var(--font-xs);
   white-space: nowrap;
+}
+
+html[data-theme="light"] .parents-hero {
+  background:
+    radial-gradient(circle at top right, rgba(23, 160, 152, 0.16), transparent 52%),
+    linear-gradient(145deg, #f4faf9 0%, #edf6f4 45%, #e6f1ef 100%);
+  border: 1px solid rgba(23, 160, 152, 0.2);
+}
+
+html[data-theme="light"] .parents-hero-badge {
+  background: rgba(23, 160, 152, 0.12);
+  border-color: rgba(23, 160, 152, 0.3);
+  color: #124043;
+}
+
+html[data-theme="light"] .parents-card {
+  background:
+    linear-gradient(180deg, rgba(23, 160, 152, 0.06), rgba(23, 160, 152, 0.02)),
+    var(--color-background-second-dark);
+  border-color: rgba(23, 160, 152, 0.18);
+  box-shadow: 0 14px 24px rgba(15, 45, 47, 0.08);
+}
+
+html[data-theme="light"] .parents-accordion {
+  border-color: rgba(23, 160, 152, 0.2);
+  box-shadow: 0 10px 20px rgba(15, 45, 47, 0.06);
+}
+
+html[data-theme="light"] .parents-accordion[open] summary {
+  border-bottom-color: rgba(23, 160, 152, 0.2);
+  background: rgba(23, 160, 152, 0.04);
+}
+
+html[data-theme="light"] .parents-list-box {
+  background: rgba(23, 160, 152, 0.04);
+  border-color: rgba(23, 160, 152, 0.2);
+}
+
+html[data-theme="light"] .parents-list-box-warning {
+  background: rgba(205, 75, 75, 0.1);
+  border-color: rgba(205, 75, 75, 0.24);
+}
+
+html[data-theme="light"] .parents-section-contact {
+  border-color: rgba(23, 160, 152, 0.2);
+  background:
+    radial-gradient(circle at bottom left, rgba(23, 160, 152, 0.16), transparent 55%),
+    #ffffff;
 }
 
 .parents-accordion-body {
@@ -159,8 +209,8 @@
 .parents-list-box {
   padding: 16px;
   border-radius: var(--br-sm);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
 }
 
 .parents-list-box h3 {
@@ -182,10 +232,10 @@
 }
 
 .parents-section-contact {
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-border);
   border-radius: var(--br-md);
   padding: 24px;
-  color: #fff;
+  color: var(--color-text-strong);
 }
 
 .parents-section-contact {
@@ -216,7 +266,9 @@
 
 @media (max-width: 768px) {
   .parents-hero {
-    margin-top: 12px;
+    margin: 12px auto 0;
+    width: calc(100% - 32px);
+    max-width: none;
     padding: 24px 20px;
     border-radius: var(--br-md);
   }

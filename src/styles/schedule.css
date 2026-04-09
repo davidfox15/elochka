@@ -1,8 +1,11 @@
 .timeline {
   position: relative;
   max-width: 800px;
-  margin: 32px auto;
-  padding: 0 16px;
+  margin: 36px auto;
+  padding: 18px 18px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
 }
 
 .timeline::before {
@@ -12,36 +15,41 @@
   top: 16px;
   bottom: 40px;
   width: 2px;
-  background: #666;
+  background: linear-gradient(180deg, #61d6ce, #ffd071);
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   display: grid;
   grid-template-columns: 60px 12px 1fr;
   align-items: center;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .timeline-time {
   width: 60px;
-  font-size: 1.2em;
+  font-size: 1.15em;
   font-weight: bold;
-  color: #fff;
+  color: var(--color-text-strong);
 }
 
 .timeline-dot {
   width: 12px;
   height: 12px;
-  background: #fff;
+  background: #63d8d0;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   z-index: 1;
 }
 
 .timeline-content {
   margin-left: 32px;
-  font-size: 1em;
-  color: white;
+  font-size: 1.05em;
+  color: var(--color-text);
+  line-height: 1.5;
 }
 
 /* Адаптив */
@@ -51,7 +59,7 @@
   }
 
   .timeline-item {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 
   .timeline-time {
@@ -60,8 +68,8 @@
 
   .timeline-content {
     margin-left: 50px;
-    font-size: 0.9em;
-    color: #fff;
+    font-size: 1em;
+    color: var(--color-text-strong);
   }
 }
 
@@ -71,4 +79,17 @@
 
 .map {
   max-width: 100%;
+}
+
+html[data-theme="light"] .timeline {
+  background: linear-gradient(150deg, rgba(23, 160, 152, 0.07), rgba(23, 160, 152, 0.03));
+  border-color: rgba(23, 160, 152, 0.2);
+}
+
+html[data-theme="light"] .timeline-item {
+  background: rgba(23, 160, 152, 0.05);
+}
+
+html[data-theme="light"] .timeline-dot {
+  border-color: #f3f8f7;
 }

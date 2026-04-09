@@ -13,17 +13,69 @@
     id="parents-button"
     href="parents.html"
     title="Информация для родителей"
-    class="button desktop-button"
+    class="button desktop-button header-nav-button"
   >
     Родителям
+  </a>
+  <a
+    id="sessions-button"
+    href="smena.html#sessions-header"
+    title="Расписание смен"
+    class="button desktop-button header-nav-button"
+  >
+    Смены
   </a>
   <a
     id="info-button"
     href="documents.html"
     title="Документы"
-    class="button desktop-button"
+    class="button desktop-button header-nav-button"
   >
     Документы
   </a>
+  <button id="theme-toggle" class="button theme-toggle" type="button">
+    <span class="theme-toggle-desktop">Тема: темная</span>
+    <span class="theme-toggle-mobile" aria-hidden="true">🌙</span>
+  </button>
   <div id="menu-button" class="mobile-button">---</div>
 </header>
+<script>
+  (function () {
+    var storageKey = "elochka-theme";
+    var root = document.documentElement;
+    var toggle = document.getElementById("theme-toggle");
+
+    function setTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      if (!toggle) {
+        return;
+      }
+      var desktopText = toggle.querySelector(".theme-toggle-desktop");
+      var mobileText = toggle.querySelector(".theme-toggle-mobile");
+      if (desktopText) {
+        desktopText.textContent =
+          theme === "light" ? "Тема: светлая" : "Тема: темная";
+      }
+      if (mobileText) {
+        mobileText.textContent = theme === "light" ? "☀" : "🌙";
+      }
+      toggle.setAttribute("aria-label", "Переключить тему");
+    }
+
+    var savedTheme = localStorage.getItem(storageKey);
+    if (savedTheme === "light" || savedTheme === "dark") {
+      setTheme(savedTheme);
+    } else {
+      setTheme(window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    }
+
+    if (toggle) {
+      toggle.addEventListener("click", function () {
+        var nextTheme =
+          root.getAttribute("data-theme") === "light" ? "dark" : "light";
+        setTheme(nextTheme);
+        localStorage.setItem(storageKey, nextTheme);
+      });
+    }
+  })();
+</script>

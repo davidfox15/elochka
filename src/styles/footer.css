@@ -1,5 +1,5 @@
 footer {
-  color: white;
+  color: var(--color-text-strong);
   background: var(--color-background-second-dark);
   width: 100%;
   display: grid;
@@ -35,5 +35,5 @@ footer {
 }
 
 .footer-map-link {
-  color: white;
+  color: var(--color-text-strong);
 }

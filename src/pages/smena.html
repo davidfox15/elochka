@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,145 +22,239 @@
   <body>
     @@include('components/header.html')
     <main>
-      <div class="container main-container">
-        <h1 class="main-title" id="sessions-header">Смены в Лагере Елочка</h1>
-        <hr class="main-hr" />
-      </div>
+      <section class="container smena-hero" id="sessions-header">
+        <span class="smena-badge">Летний сезон 2026</span>
+        <h1 class="smena-title">Выберите смену в лагере «Елочка»</h1>
+        <p class="smena-subtitle">
+          Классические 21-дневные и тематические 7-дневные смены: безопасная
+          среда, яркая программа и развитие детей в атмосфере команды.
+        </p>
+        <div class="smena-pills">
+          <span class="smena-pill">Сосновый бор</span>
+          <span class="smena-pill">Английский и творчество</span>
+          <span class="smena-pill">Спорт и командные игры</span>
+        </div>
+        <div class="smena-stats">
+          <div class="smena-stat">
+            <span class="smena-stat-value">5</span>
+            <span class="smena-stat-label">смены за сезон</span>
+          </div>
+          <div class="smena-stat">
+            <span class="smena-stat-value">7-21</span>
+            <span class="smena-stat-label">дней длительность</span>
+          </div>
+          <div class="smena-stat">
+            <span class="smena-stat-value">7-17</span>
+            <span class="smena-stat-label">лет возраст детей</span>
+          </div>
+        </div>
+      </section>
+
       <article class="container sessions" id="sessions">
-        <h2 class="sessions-title">Информация о сменах</h2>
+        <div class="sessions-head">
+          <h2 class="sessions-title">Информация о сменах</h2>
+        </div>
+
         <div class="sessions-list">
-          <!-- СМЕНА No1 -->
-          <div class="session-card">
-            <span class="session-days">21 день</span>
-            <h3 class="session-name">1 смена - Elochka 1</h3>
-            <div class="session-date">с 3.06.25 по 23.06.25</div>
+          <div class="session-card session-card--classic">
+            <div class="session-head">
+              <span class="session-days">21 день</span>
+              <h3 class="session-name">1 смена - Квест к себе</h3>
+              <div class="session-date">с 1.06.26 по 21.06.26</div>
+            </div>
+            <div class="session-meta">
+              <span class="session-chip">Возраст: 7-17 лет</span>
+              <span class="session-chip">Классическая смена</span>
+            </div>
             <div class="session-price-list">
-              <span class="session-price-type">Полная стоимость </span
-              ><span class="session-price"> 34.000₽ </span>
-              <span class="session-price-type">Родительская доля </span
-              ><span class="session-price"> 24.000₽ </span>
-              <span class="session-price-type">Льготная</span
-              ><span class="session-price">бесплатно</span>
+              <span class="session-price-type">Полная стоимость</span><span class="session-price">39.900₽</span>
+              <span class="session-price-type">Родительская доля</span><span class="session-price">29.400₽</span>
             </div>
             <p class="session-description">
-              Cмена для детей от 7 до 17 лет<br />
-              проведем 3 недели в сосновом бору, наберемся сил и энергии от
-              чистого воздуха, заведем новых друзей, активно будем участвовать в
-              командных играх, посещать кружки по интересам (в том числе
-              английский), отдохнем и получим море впечатлений
+              Первая оздоровительная смена сезона в формате «Квест к себе».
             </p>
-            <div class="flex-spacer"></div>
-            <span class="session-extra"
-              >* действует программа гос поддержки для учеников Брянской
-              области</span
-            >
+            <ul class="session-features">
+              <li>Командные игры и ежедневные активности на свежем воздухе.</li>
+              <li>Кружки по интересам, включая английский язык.</li>
+              <li>Новые друзья, безопасная среда и насыщенная программа.</li>
+            </ul>
+            <span class="session-extra">
+              * для учеников Брянска и Брянской области доступна путевка с родительской долей
+            </span>
+            <a class="session-action" href="#buy-header">Оформить путевку</a>
           </div>
 
-          <!-- СМЕНА No2 -->
-          <div class="session-card">
-            <span class="session-days">7 дней</span>
-            <h3 class="session-name">2 смена - Elochka Camp</h3>
-            <div class="session-date">с 4.07.25 по 11.07.25</div>
+          <div class="session-card session-card--theme">
+            <div class="session-head">
+              <span class="session-days">21 день</span>
+              <h3 class="session-name">2 смена - Квест в мир</h3>
+              <div class="session-date">с 23.06.26 по 13.07.26</div>
+            </div>
+            <div class="session-meta">
+              <span class="session-chip">Возраст: 7-17 лет</span>
+              <span class="session-chip">Оздоровительная смена</span>
+            </div>
             <div class="session-price-list">
-              <span class="session-price-type">Полная стоимость </span
-              ><span class="session-price"> 13.000₽ </span>
-              <span class="session-price-type">Скидки / Льготы</span
-              ><span class="session-price">нет</span>
+              <span class="session-price-type">Полная стоимость</span><span class="session-price">41.900₽</span>
+              <span class="session-price-type">Родительская доля</span><span class="session-price">31.400₽</span>
             </div>
             <p class="session-description">
-              Смена для детей от 10 до 14 лет<br />
-              Духовно-нравственное направление, поддерживаем христианские
-              ценности, короткая, но очень насыщенная смена, где будем совмещать
-              веселье и разговоры меняющие жизнь. Будем мотивировать преуспевать
-              и не сдаваться, делиться историями, проведем дрим тимы (от
-              английского «dream team” - команда мечты), посетим мастерклассы,
-              будем много выступать по отрядам, активно участвовать во всех
-              играх, много петь и смеяться. Времени скучать точно не будет !
+              Вторая оздоровительная смена в формате «Квест в мир».
             </p>
+            <ul class="session-features">
+              <li>Насыщенная программа отдыха, развития и командной работы.</li>
+              <li>Творческие занятия, игры и мероприятия на территории лагеря.</li>
+              <li>Пятиразовое питание, проживание и медицинское сопровождение.</li>
+            </ul>
+            <span class="session-extra">
+              * для учеников Брянска и Брянской области доступна путевка с родительской долей
+            </span>
+            <a class="session-action" href="#buy-header">Оформить путевку</a>
           </div>
 
-          <!-- СМЕНА No3-->
-          <div class="session-card">
-            <span class="session-days">7 дней</span>
-            <h3 class="session-name">3 смена - Level Up</h3>
-            <div class="session-date">с 30.07.25 по 06.08.25</div>
+          <div class="session-card session-card--intense">
+            <div class="session-head">
+              <span class="session-days">21 день</span>
+              <h3 class="session-name">3 смена - Квест вдохновения</h3>
+              <div class="session-date">с 15.07.26 по 4.08.26</div>
+            </div>
+            <div class="session-meta">
+              <span class="session-chip">Возраст: 7-17 лет</span>
+              <span class="session-chip">Оздоровительная смена</span>
+            </div>
             <div class="session-price-list">
-              <span class="session-price-type">Полная стоимость </span
-              ><span class="session-price"> 15.000₽ </span>
-              <span class="session-price-type">Скидки / Льготы</span
-              ><span class="session-price">нет</span>
+              <span class="session-price-type">Полная стоимость</span><span class="session-price">41.900₽</span>
+              <span class="session-price-type">Родительская доля</span><span class="session-price">31.400₽</span>
             </div>
             <p class="session-description">
-              Смена для подростков от 12 лет<br />
-              Духовно-нравственное направление уникальная смена с погружением в
-              английский язык - каждый день будем практиковать свои скилы,
-              прорабатывать языковой барьер, а также проходить интересные
-              квесты, экстремальные препятствия, играть в ночные игры, слушать
-              мотивационных спикеров, менять жизнь к лучшему. Эта смена - не для
-              слабаков 🙈
+              Третья оздоровительная смена в формате «Квест вдохновения».
             </p>
+            <ul class="session-features">
+              <li>Творческие активности, кружки и культурная программа.</li>
+              <li>Спортивные занятия и командные игры каждый день.</li>
+              <li>Проживание, питание, охрана и коллективная страховка.</li>
+            </ul>
+            <span class="session-extra">
+              * для учеников Брянска и Брянской области доступна путевка с родительской долей
+            </span>
+            <a class="session-action" href="#buy-header">Оформить путевку</a>
           </div>
 
-          <!-- СМЕНА No4-->
-          <div class="session-card">
-            <span class="session-days">21 день</span>
-            <h3 class="session-name">4 смена Elochka 2</h3>
-            <div class="session-date">с 8.08.25 по 28.08.25</div>
+          <div class="session-card session-card--classic">
+            <div class="session-head">
+              <span class="session-days">21 день</span>
+              <h3 class="session-name">4 смена - Квест за мечтой</h3>
+              <div class="session-date">с 6.08.26 по 26.08.26</div>
+            </div>
+            <div class="session-meta">
+              <span class="session-chip">Возраст: 7-17 лет</span>
+              <span class="session-chip">Оздоровительная смена</span>
+            </div>
             <div class="session-price-list">
-              <span class="session-price-type">Полная стоимость </span
-              ><span class="session-price"> 32.000₽ </span>
-              <span class="session-price-type">Родительская доля </span
-              ><span class="session-price"> 22.000₽ </span>
-              <span class="session-price-type">Льготная</span
-              ><span class="session-price">бесплатно</span>
+              <span class="session-price-type">Полная стоимость</span><span class="session-price">39.900₽</span>
+              <span class="session-price-type">Родительская доля</span><span class="session-price">29.400₽</span>
             </div>
             <p class="session-description">
-              Смена для детей от 7 до 17 лет<br />
-              Проведем 3 недели в сосновом бору, наберемся сил и энергии от
-              чистого воздуха, заведем новых друзей, активно будем участвовать в
-              командных играх, посещать кружки по интересам (в том числе
-              английский), отдохнем и получим море впечатлений
+              Четвертая оздоровительная смена в формате «Квест за мечтой».
             </p>
-            <div class="flex-spacer"></div>
-            <span class="session-extra"
-              >* действует программа гос поддержки для учеников Брянской
-              области</span
-            >
+            <ul class="session-features">
+              <li>Яркое завершение сезона с активной программой.</li>
+              <li>Кружки, спорт, мероприятия и поддержка наставников.</li>
+              <li>Пятиразовое питание, проживание и медицинское обслуживание.</li>
+            </ul>
+            <span class="session-extra">
+              * для учеников Брянска и Брянской области доступна путевка с родительской долей
+            </span>
+            <a class="session-action" href="#buy-header">Оформить путевку</a>
+          </div>
+
+          <div class="session-card session-card--theme">
+            <div class="session-head">
+              <span class="session-days">7 дней</span>
+              <h3 class="session-name">5 смена - Elochka Camp</h3>
+              <div class="session-date">с 6.08.26 по 12.08.26</div>
+            </div>
+            <div class="session-meta">
+              <span class="session-chip">Короткая смена</span>
+              <span class="session-chip">Духовно-нравственное направление</span>
+            </div>
+            <div class="session-price-list">
+              <span class="session-price-type">Полная стоимость</span><span class="session-price">14.500₽</span>
+              <span class="session-price-type">Льготы</span><span class="session-price">нет</span>
+            </div>
+            <p class="session-description">
+              Короткая 7-дневная смена Elochka Camp с духовно-нравственным
+              направлением.
+            </p>
+            <ul class="session-features">
+              <li>Насыщенная культурная и командная программа.</li>
+              <li>Кружки, спорт, проживание и пятиразовое питание.</li>
+              <li>Медицинское обслуживание, охрана и коллективная страховка.</li>
+            </ul>
+            <a class="session-action" href="#buy-header">Оформить путевку</a>
           </div>
         </div>
       </article>
+
       <article class="container smena-buy">
         <h2 id="buy-header">Купить путевку</h2>
-        <p>
-          Путёвки на полные смены бывают трёх типов:<br />
-          🌿 за полную стоимость<br />
-          🌿 с родительской долей<br />
-          🌿 льготная (бесплатная) путёвка<br />
+        <p class="smena-buy-intro">
+          Продажа путевок стартует с 16 апреля. Рекомендуем бронировать места
+          заранее по телефону.
         </p>
-        <p>
-          ❇️ Путёвку за полную стоимость вы можете приобрести приехав к нам или
-          оформив ее по телефону.<br />
-        </p>
-        <p>
-          ❇️ Путёвка с родительской долей - это та, часть стоимости которой
-          (около 30 процентов) оплачивает областной бюджет. Поэтому получить
-          такую путёвку могут только дети, обучающиеся на территории Брянской
-          области. Для этого, вам нужно собрать пакет необходимых документов и
-          предоставить их нам. Если все документы соответствуют требованиям, вы
-          приобретаете тут же путевку у нас. Дистанционно такую путевку оформить
-          нельзя.<br />
-        </p>
-        <p>
-          ❇️ Бесплатная путёвка не будет стоить родителям ни одного рубля. Она
-          положена семьям, находящимся в трудной жизненной ситуации. Список тех,
-          кому положена бесплатная путёвка, прилагаем. Процедура подачи
-          заявления на бесплатную путевку такая же, как и на путевку с
-          родительской долей.<br />
-        </p>
-        <span>
-          📞 Звони нам по телефону 8-900-372-57-70, чтобы узнать больше и
-          записаться на смену!
-        </span>
+
+        <div class="smena-buy-grid">
+          <article class="smena-buy-card">
+            <h3>Полная стоимость</h3>
+            <p>
+              Путевку можно оформить по телефону или при личном визите в лагерь.
+              Это самый быстрый способ бронирования места.
+            </p>
+          </article>
+
+          <article class="smena-buy-card">
+            <h3>С родительской долей</h3>
+            <p>
+              Любой ученик Брянска и Брянской области может приобрести путевку с
+              родительской долей.
+            </p>
+            <p>
+              Нужно предоставить комплект документов. После проверки можно
+              оформить путевку в лагере.
+            </p>
+          </article>
+
+          <article class="smena-buy-card">
+            <h3>Что входит в стоимость</h3>
+            <p>
+              Пятиразовое питание, проживание, культурная программа, кружки,
+              спортивные занятия, медицинское обслуживание, коллективная
+              страховка и охрана.
+            </p>
+          </article>
+        </div>
+
+        <div class="smena-buy-steps" aria-label="Этапы покупки">
+          <div class="smena-buy-step">
+            <span>1</span>
+            <p>Выберите смену и уточните наличие мест.</p>
+          </div>
+          <div class="smena-buy-step">
+            <span>2</span>
+            <p>Подготовьте документы под выбранный тип путевки.</p>
+          </div>
+          <div class="smena-buy-step">
+            <span>3</span>
+            <p>Запишитесь на экскурсию по лагерю (с 1 мая, по предварительной брони).</p>
+          </div>
+        </div>
+
+        <div class="smena-buy-contact">
+          <p>
+            📞 Для брони и подробной информации звоните:
+            <a href="tel:+79003735770">8-900-373-57-70</a> (Вероника).
+          </p>
+        </div>
       </article>
     </main>
     @@include('components/footer.html')

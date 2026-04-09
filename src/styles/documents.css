@@ -1,17 +1,25 @@
 .documents {
-  color: var(--color-light);
+  color: var(--color-text);
 }
 
 .title {
-  font-size: var(--font-lg);
-  margin: 1.5rem auto;
+  display: block;
+  min-height: auto;
+  padding: 0;
+  border-radius: 0;
+  font-size: clamp(28px, 3vw, 38px);
+  margin: 1.8rem auto;
+  text-align: center;
+  background: none;
+  border: none;
 }
 
 .documents-grid {
   display: grid;
-  grid-template-columns: 600px;
+  grid-template-columns: minmax(0, 760px);
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -21,38 +29,68 @@
 }
 
 .document-card {
-  background-color: var(--color-background-second-dark);
-  border-radius: var(--br-md);
-  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
 }
 
+.document-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(180deg, #66d9d2, #ffd071);
+}
+
 .document-card .icon {
   width: 40px;
   height: auto;
+  margin-left: 4px;
 }
 
 .doc-title {
-  font-size: var(--font-sm);
+  font-size: clamp(20px, 1.8vw, 26px);
+  color: var(--color-text-strong);
   font-weight: bold;
   margin: 0;
+  line-height: 1.35;
 }
 
 .doc-desc {
-  font-size: var(--font-xs);
-  margin: 0.25rem 0;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  margin: 0.35rem 0;
+  line-height: 1.5;
 }
 
 .download {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: var(--color-green);
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  margin-top: 0.65rem;
+  color: #0f2d2e;
   text-decoration: none;
-  font-size: var(--font-xs);
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 999px;
+  background: linear-gradient(160deg, #8be6df, #6ed4cb);
+  padding: 6px 12px;
 }
 
 .download:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+html[data-theme="light"] .document-card {
+  background: linear-gradient(150deg, rgba(23, 160, 152, 0.07), rgba(23, 160, 152, 0.03));
+  border-color: rgba(23, 160, 152, 0.2);
 }

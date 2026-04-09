@@ -1,12 +1,15 @@
 .main-list-card {
   width: 300px;
-  background-color: #fff;
+  background: linear-gradient(160deg, #d7f0ed 0%, #c6e8e3 100%);
+  color: #0f2d2e;
+  border: 1px solid rgba(23, 160, 152, 0.34);
   border-radius: var(--br-md);
   padding: 8px 16px;
   margin: 0 150px 0 0;
   display: flex;
   align-items: center;
   gap: 16px;
+  box-shadow: 0 8px 16px rgba(15, 45, 46, 0.08);
 
   transition: ease 0.1s all;
 }
@@ -18,11 +21,13 @@
 
 .main-list-card:nth-child(2n) {
   margin: 0 0 0 150px;
-  background-color: var(--color-green);
+  background: linear-gradient(160deg, #9ad7d0 0%, #83c9c1 100%);
 }
 
 .main-list-card hr {
   margin: 8px 0;
+  border: 0;
+  border-top: 1px solid rgba(15, 45, 46, 0.22);
 }
 
 .main-list-card img {
@@ -42,8 +47,19 @@
 
 .main-list-card-title {
   font-size: var(--font-sm);
+  color: #0f2d2e;
 }
 
 .main-list-card-small {
   font-size: var(--font-xs);
+  color: #0f2d2e;
+}
+
+html[data-theme="light"] .main-list-card {
+  background: linear-gradient(160deg, #f7fcfc 0%, #edf7f6 100%);
+  border-color: rgba(23, 160, 152, 0.24);
+}
+
+html[data-theme="light"] .main-list-card:nth-child(2n) {
+  background: linear-gradient(160deg, #bde9e4 0%, #a9e0da 100%);
 }

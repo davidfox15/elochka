@@ -34,8 +34,10 @@
 
 body {
   background: var(--color-background-dark);
+  color: var(--color-text);
   font-family: "Jost", "Roboto Condensed", Arial, Helvetica, sans-serif;
   min-height: calc(100vh - 90px);
+  line-height: 1.55;
 }
 
 main {
@@ -64,29 +66,38 @@ li {
 .container {
   width: 100%;
   max-width: 1440px;
-  padding: 0 32px;
+  padding: 0 36px;
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 18px;
+  }
+}
+
 h3 {
-  color: white;
+  color: var(--color-text-strong);
   font-size: var(--font-md);
   font-weight: 700;
   text-align: center;
+  line-height: 1.25;
 }
 
 h2 {
-  color: white;
+  color: var(--color-text-strong);
   font-size: var(--font-lg);
   font-weight: 700;
   text-align: center;
+  line-height: 1.2;
 }
 
 h1 {
-  color: white;
+  color: var(--color-text-strong);
   font-size: var(--font-xl);
   font-weight: 700;
   text-align: center;
+  line-height: 1.12;
 }
 
 a {
